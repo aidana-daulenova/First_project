@@ -182,30 +182,112 @@
 // }
 
 
-function calculateVolumeAndArea(number) {
-    if (typeof number != 'number' || number % 1 !==0  || number < 0 || number === 0) {
-        return "При вычислении произошла ошибка";
+// function calculateVolumeAndArea(number) {
+//     if (typeof number != 'number' || number % 1 !==0  || number < 0 || number === 0) {
+//         return "При вычислении произошла ошибка";
+//     } else {
+//         volume = number * number * number;
+//         area = 6 * (number * number);
+
+//         return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+//     }
+
+// }
+
+// const result = calculateVolumeAndArea(8);
+// console.log('result', result)
+
+
+// function getCoupeNumber(number) {
+//     if (typeof number != 'number' || number % 1 !==0 || number < 0) {
+//         return 'Ошибка. Проверьте правильность введенного номера места';
+//     } else if (number === 0 || number > 36) {
+//         return 'Таких мест в вагоне не существует';
+//     } else {
+//         return Math.ceil(number/4);
+//     }
+// }
+
+// getCoupeNumber(11);
+
+// function getTimeFromMinutes(number) {
+//     if (typeof number != 'number' || number % 1 != 0 || number < 0) {
+//         return 'Ошибка, проверьте данные';
+//     } else if (number < 60) {
+//         return 'Это 0 часов и ' + number + ' минут';
+//     } else {
+//         let integer = Math.trunc(number / 60);
+//         let tenths = number % 60;
+//         if (integer = 1) {
+//             return `Это ${integer} час и ${tenths} минут`;
+//         } else { 
+//             return `Это ${integer} часа и ${tenths} минут`;
+//         }
+//     }
+// }
+
+// console.log(getTimeFromMinutes(180));
+
+
+
+// function findMaxNumber(a, b, c, d) {
+//     if (typeof a != 'number' || 
+//         typeof b != 'number' || 
+//         typeof c != 'number' || 
+//         typeof d != 'number') {
+//         return '0';
+//     }
+//         return Math.max(a, b, c, d);
+// }
+
+// console.log(findMaxNumber(110, 80, 0, 678));
+
+
+function fib(number) {
+    if (typeof number != 'number' || number <= 0 || !Number.isInteger(number)) {
+        return " ";
     } else {
-        volume = number * number * number;
-        area = 6 * (number * number);
-
-        return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+        if (number === 1) return '0 1';
+        let a = 0;
+        let b = 1;
+        let arr = [a,b];
+            for (let i = 2; i < number; i++) {
+            let old_a = a; 
+            a = b;
+            b = old_a + b;
+            arr.push(b);
+        }
+    return arr.join(' ');
     }
-
 }
 
-const result = calculateVolumeAndArea(8);
-console.log('result', result)
+console.log(fib(1));
 
 
-function getCoupeNumber(number) {
-    if (typeof number != 'number' || number % 1 !==0 || number < 0) {
-        return 'Ошибка. Проверьте правильность введенного номера места';
-    } else if (number === 0 || number > 36) {
-        return 'Таких мест в вагоне не существует';
-    } else {
-        return Math.ceil(number/4);
+
+function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
     }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first} `;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return result;
 }
 
-getCoupeNumber(11);
+console.log(fib(5));
