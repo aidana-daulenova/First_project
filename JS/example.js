@@ -243,51 +243,152 @@
 // console.log(findMaxNumber(110, 80, 0, 678));
 
 
-function fib(number) {
-    if (typeof number != 'number' || number <= 0 || !Number.isInteger(number)) {
-        return " ";
-    } else {
-        if (number === 1) return '0 1';
-        let a = 0;
-        let b = 1;
-        let arr = [a,b];
-            for (let i = 2; i < number; i++) {
-            let old_a = a; 
-            a = b;
-            b = old_a + b;
-            arr.push(b);
-        }
-    return arr.join(' ');
-    }
-}
+// function fib(number) {
+//     if (typeof number != 'number' || number <= 0 || !Number.isInteger(number)) {
+//         return "";
+//     } else {
+//         if (number === 1) return "0";
+//         let a = 0;
+//         let b = 1;
+//         let arr = [a,b];
+//             for (let i = 2; i < number; i++) {
+//             let old_a = a; 
+//             a = b;
+//             b = old_a + b;
+//             arr.push(b);
+//         }
+//     return arr.join(' ');
+//     }
+// }
 
-console.log(fib(1));
+// console.log(fib(2));
 
 
 
-function fib(num) {
-    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
-        return "";
-    }
+// function fib(num) {
+//     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
 
-    let result = '';
-    let first = 0;
-    let second = 1;
+//     let result = '';
+//     let first = 0;
+//     let second = 1;
 
-    for (let i = 0; i < num; i++) {
-        if (i + 1 === num) {
-            result += `${first}`;
-            // Без пробела в конце
-        } else {
-            result += `${first} `;
-        }
+//     for (let i = 0; i < num; i++) {
+//         if (i + 1 === num) {
+//             result += `${first}`;
+//             // Без пробела в конце
+//         } else {
+//             result += `${first} `;
+//         }
 
-        let third = first + second;
-        first = second;
-        second = third;
-    }
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(fib(5));
+// console.log(fib(2));
+
+//     return result;
+// };
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%' 
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+//     return exp;
+// };
+
+// console.log(showExperience(personalPlanPeter));
+
+// function showProgrammingLangs(plan) {
+//     let result = '';
+//     for (let key in plan.skills.programmingLangs) {
+//         if (Object.keys(plan.skills.programmingLangs).length == 0) {
+//             result += '';
+//         } else {
+//             result += `Язык ${key} изучен на ${plan.skills.programmingLangs[key]}\n`;
+//         }
+//     return result;
+// }
+// };
+
+// console.log(showProgrammingLangs(personalPlanPeter));
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%' 
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+
+// function showAgeAndLangs(plan) {
+//     const {age} = plan;
+//     const {languages} = plan.skills;
+//     let str = `Мне ${age} и я владею языками: ${languages.toString().toUpperCase()}`;
+//     return str;
+// }
+
+// console.log(showAgeAndLangs(personalPlanPeter));
+
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     if (arr.length === 0) {
+//         return 'Семья пуста';
+//     } else {
+//         const familyMembers = arr.join(' ');
+//         return `Семья состоит из: ${familyMembers}`;
+//     };
+// }
+
+// console.log(showFamily(family));
+
+// const favoriteCities = [];
+
+// function standardizeStrings(arr) {
+//     const city = arr.join('\n').toLowerCase();
+//     console.log(city);
+//     };
+
+// console.log(standardizeStrings(favoriteCities));
+
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     if (typeof str === 'string') {
+//         const numbers = Array.from(someString);
+//         numbers.reverse();
+//         return numbers.join('');
+//         } else {
+//             return 'Ошибка!'
+//         };
+// }
+
+// console.log(reverse(someString));
+
