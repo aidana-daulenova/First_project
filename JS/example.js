@@ -392,3 +392,41 @@
 
 // console.log(reverse(someString));
 
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// const allCurrencies = ['UAH', 'UAH', 'RUB', 'CNY'];
+// const notAvailableCurrencies = []
+
+// function availableCurr(arr, missingCurr) {
+//     if (arr.length === 0) {
+//         return 'Нет доступных валют';
+//     }
+//     if (missingCurr === undefined) {
+//         return `Доступные валюты:\n${arr.join('\n')}`
+//     }
+//     const result =[];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] != missingCurr) {
+//             result.push(arr[i]);
+//         };
+//     };
+//     return `Доступные валюты:\n${result.join('\n')}`
+// };
+
+
+
+//     // for (let i = 0; i < arr.length; i++) {
+//     //     if (arr[i] === missingCurr) {
+//     //         continue;
+//     //     }
+//     //     str += `${arr[i]}\n`;
+//     // }
+
+//     return str;
+
+// console.log(availableCurr(allCurrencies));
+
+
+
